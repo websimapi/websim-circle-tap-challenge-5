@@ -334,10 +334,10 @@ document.addEventListener('DOMContentLoaded', () => {
         gameOverMenu.classList.add('hidden');
         levelDisplay.classList.add('hidden');
         startMenu.classList.remove('hidden');
-        // Reset to the initial preview state for the start menu
+        // Reset to a preview state based on the last played difficulty
         level = 1; // Reset level for color preview
-        currentDifficulty = 'easy'; // Reset to easy for preview
-        targetSize = difficulties.easy.size;
+        // currentDifficulty is already set from the last game
+        targetSize = difficulties[currentDifficulty].size;
         targetStartAngle = Math.PI / 4;
         angle = -Math.PI / 2;
         resizeCanvas(); // This will call draw()
